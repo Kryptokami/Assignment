@@ -2,12 +2,47 @@
  <head>
    <!-- hello -->
    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> 
+
     <style>
+
+      * {
+  box-sizing: border-box;
+}
+   .column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  margin: 5px 20px 5px 15px ;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,5);
+  border-radius: 5px;
+  
+}
+
+/* Clear floats after the columns */
+.cardrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+      .cardrow{
+         display: flex;
+         margin:  10px ;
+
+
+      }
+      .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
      
       div.nav{
          
-    display: flex;
-  justify-content: space-between;
+       display: flex;
+     justify-content: space-between;
 
     
       }
@@ -38,34 +73,73 @@
       .leftcolumn{
          float: left;
          width: 75%;
+         padding: 20;
+      }
+      .rightcolumn{
+         width: 25%;
       }
        .leftcolumn1 {
          float: left;
          width: 100%;
       }
-
-      .rightcolumn{
-         float: left;
+      .rightcolumn1{
+         float: right;
          width: 25%;
-         padding: 20;
+         padding: 20;.
+
       }
       .banimg {
   background-color: #343A40;
+  border-radius: 15px;
   /*width: 100%;*/
   padding: 10px;
   color: white;
 
       }
+      .banimg1 {
+  background-color: #FFFF;
+  border-radius: 15px;
+  /*width: 100%;*/
+  padding: 10px;
+  color: black;
+
+      }
       .card1{
          background-color: grey;
          margin-top: 10px;
+         margin-left: 10px;
          padding: 20px;
+         width: 50%;
       }
-      .row:after {
+     /* .row:after {
   content: "";
   display: table;
   clear: both;
+}*/
+div.col-sm-6{
+   display: inline;
 }
+div.cardwrapper{
+   /*display: inline-flex;
+   justify-content: space-between;*/
+}
+@media screen and (max-width: 1240px) {
+  .column {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+
+  }
+}
+code { 
+  font-family: monospace;
+  color: black;
+
+}
+
 
 
 
@@ -74,28 +148,30 @@
  <body> 
    
    <div class="nav">
-  <a href="#" style="padding: 0;margin: 20;">Subscribe</a>
-  <a href="#" style="text-decoration: none;"><h1 style="padding: 0; margin: 10;">Large</h1></a>
+  <a  class="link-dark" href="#" style="padding: 0;margin: 20; text-decoration: none;">Subscribe</a>
+  <a href="#" style="text-decoration: none;"><h1 style="padding: 0; margin: 10;color: black;">Large</h1></a>
   <div class="right">
-  <a href="#">Search</a>
+  <!-- <a href="#">Search</a>-->
+
+  <button><i class="fa fa-search"></i></button>
   <button>signup</button>
 </div>
 </div>
 <hr style="width:100%;text-align:center;">
 <div class="cat">
    <li>
-      <ul>World</ul>
-      <ul>U.S</ul>
-      <ul>Technology</ul>
-      <ul>Design</ul>
-      <ul>Culture</ul>
-      <ul>Business</ul>
-      <ul>Politics</ul>
-      <ul>Opinion</ul>
-      <ul>Science</ul>
-      <ul>Health</ul>
-      <ul>Style</ul>
-      <ul>Travel</ul>
+      <ul style="padding-left: 10px;">World</ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">U.S</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Technology</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Design</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Culture</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Business</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Politics</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Opinion</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Science</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Health</a></ul>
+      <ul><a class="link-dark" href="#" style="text-decoration: none;">Style</a></ul>
+      <ul style="padding-right: 10px;"><a class="link-dark" href="#" style="text-decoration: none;">Travel</a></ul>
    </li>
 </div>
 
@@ -103,13 +179,300 @@
       <div class="row">
          <div class="leftcolumn1">
             <div class="banimg">
-               <h1 style="width: 20%;">Title of a Longer feature blog post</h1>
-               <p style="width: 30%; font-size: 20;">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+               <h1 style="width: 30%; padding-left: 20; margin-top: 20; margin-bottom: 20;">Title of a Longer feature blog post</h1>
+               <p style="width: 30%; font-size: 20;  padding-left: 20;">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+               <b><a href="#" style="text-decoration: none; padding-left: 20 ; color: white; ">Continue Reading</a></b>
+               <p></p>
             </div>
          </div>
       </div>
+   <!-- <div class="row">
+      <div class="leftcolumn2">
+         <div class="card1">
+         
+            <h1>Featured Post</h1>
+            <a href="#">Hi lashiudahsdaiushdaisuhdaiuhsdaisuhduaihsaushdiuahsduihasudh</a>
+            <a href="#">hihi</a>
+            <div class="right">
+               <img src="eg.png" alt="example">
+            </div>
+         </div>
+      </div>
+   </div>
+   <img src="eg.png" alt="Mee" width="500" height="500"> -->
+
+   <!-- <div class="card" style="width: 50rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Feature post</h5>
+    <h6 class="card-subtitle mb-2 text-muted"> Nov 12</h6>
+    <p class="card-text">This is a wider card with supporting text below as a naural lead-in to additional content.</p>
+    <a href="#" class="card-link">Card link</a>
+  </div>
+</div> -->
    
+    <!--  <div class="row">
+               <div class="col-sm-6">
+                   <div class="card1">
+                       <div class="row card-body">
+                          <div class="col-sm-6">
+                             <h5 class="card-title">Feature post</h5>
+                             <h6 class="card-subtitle mb-2 text-muted"> Nov 12</h6>
+                              <p class="card-text">This is a wider card with supporting text below as a naural lead-in to additional content.</p>
+                              <a href="#" class="card-link">Card link</a>
+                           </div>
+                           <img class="col-sm-6" src="eg.png" alt="sans"/>
+                       </div>
+                   </div>
+               </div>
+      
+       <div class="row">
+               <div class="col-sm-6">
+                   <div class="card">
+                       <div class="row card-body">
+                          <div class="col-sm-6">
+                             <h5 class="card-title">Feature post</h5>
+                             <h6 class="card-subtitle mb-2 text-muted"> Nov 12</h6>
+                              <p class="card-text">This is a wider card with supporting text below as a naural lead-in to additional content.</p>
+                              <a href="#" class="card-link">Card link</a>
+                           </div>
+                           <img class="col-sm-6" src="eg.png" alt="sans"/>
+                       </div>
+                   </div>
+               </div>
+            </div> -->
+          <!--   <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+      </div>
+      <img class="col-sm-6" src="eg.png" alt="sans"/>
+      
+    </div>
+    
+
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!--  -->
+<!-- <div class="cardwrapper">
+     <div class="row">
+           <div class="col-sm-6">
+               <div class="card">
+                   <div class="card-body">
+                       <div class="row">
+                           <div class="col-sm-6">
+                               <h5 class="card-title">Title</h5>
+                               <p class="card-text">Some text ehre</p>
+                               <a href="#" class="btn btn-primary">Go somewhere</a>
+                           </div>
+                           <div class="col-sm-6 text-right">
+                               <img class="" src="eg.jpeg" alt="sans" width="200px">
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+         <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5 class="card-title">Title</h5>
+                            <p class="card-text">Some text ehre</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <img class="" src="eg.jpeg" alt="sans" width="200px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div> -->
+
+ <div class="cardrow">
+  <div class="column" style="background-color:#FFFF;">
+   <div class="cardrow">
+  <div class="inacolumn" style="background-color:#FFFF; float: left; width: 50%; padding: 10px;">
+   <b><p class="text-primary">World</p></b>
+
+    <h2>Featured Post</h2>
+    <h6 class="card-subtitle mb-2 text-muted"> Nov 12</h6>
+    <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+    <br>
+    <a href="#" class="link-primary" style="text-decoration: none;">Continue reading</a>
+
+
+  </div>
+   <div class="inacolumn" style="background-color:#FFFF; float: right; width: 50%">
+    <img src="test.png" alt="" width="100%" height="100%">
+  </div>
 </div>
+</div>
+  <div class="column" style="background-color:#FFFF;">
+   <div class="cardrow">
+  <div class="inacolumn" style="background-color:#FFFF; float: left; width: 50%; padding: 10px;">
+ <b><p class="text-success">World</p></b>
+
+    <h2>Featured Post</h2>
+    <h6 class="card-subtitle mb-2 text-muted"> Nov 12</h6>
+    <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+    <br>
+    <a href="#" class="link-primary" style="text-decoration: none;">Continue reading</a>
+
+
+  </div>
+   <div class="inacolumn" style="background-color:#FFFF; float: right; width: 50%" >
+    <img src="test.png" alt="" width="100%" height="100%">
+  </div>
+</div>  
+</div>
+</div>
+<br>
+<!--  -->
+<div class="row">
+         <div class="leftcolumn">
+            <div class="banimg1">
+               <h2 >From the Firehose</h2>
+               <hr>
+               <h1>Sample Blog post.</h1>
+               <p>This biog post shows a fow difforent types of content shat's supported and styled with Booistrap Basic typography, images, and code are al supported.</p>
+               <hr>
+<p>Cum socis natoque penatibus et magnis <a href="#" class="link-primary" style="text-decoration: none;">dis parturient montes</a>, nascatur riciculus mus. Pencan su
+leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consecletur est
+al lobortis. Cras mattis consectetur purus sit amor fermentum.</p>
+<p style="display: inline;">Curabitur blandit tempus porttilor.<p class="fw-bold" style="display: inline;"> Nullam quis risus eget una mollis </p> ornare vel eu leo. Nuliam d
+isolar id nich citricies vehieda un il elit.</p>
+<p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+<h1 id="bhead1">Heading</h1>
+<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor autor. Duis mollis, est non commodo luctus, nisi era porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta a consectetur ac, vestibulum at eros.<p>
+<h1>Sub-heading</h1>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p>
+<p><code>Example code block</code>
+</p>
+<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.
+Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+<h1>Sub-heading</h1>
+<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+ <ul>
+    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur etp;</li>
+    <li>Donec id elit non mi porta gravida at eget metus.</li>
+    <li>Nulla vitae elit libero, a pharetra augue.</li>
+  </ul>
+
+<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+   <ol> 
+    <li>Vestibulum id ligula porta felis euismod semper.</li>
+    <li> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+    <li> Maecenas sed diam eget risus varius blandit sit amet non magna</li>
+ </ol>
+   <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
+Another blog post</p>
+<!-- December 23, 2013 by Jacob -->
+<h1>Another Blog Post</h1>
+<p>Cum sociis natoque penatibus et magnis<a  href="#" style="text-decoration:none;"> dis parturient montes,</a> nascetur ridiculus mus. Aenean eu
+leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est
+at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+<p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id
+dolor id nibh ultricies vehicula ut id elit.</p>
+<p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<h1>New feature</h1>
+<!-- December 14, 2013 by Chris -->
+<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<ul>
+   <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+   <li>Donec id elit non mi porta gravida at eget metus.</li>
+   <li> Nulla vita elit libero, a pharetra augue.</li>
+</ul>
+<p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vita elit libero, a pharetra augue.</p>
+<button class="btn 1" style="border-color: blue;background-color: white; color: blue;border-radius: 9px; padding: 10px 20px;  ">older</button>
+<button class="btn2" style="border-color: lightgrey;background-color: white; color: lightgrey;border-radius: 9px; padding: 10px 20px;">older</button>
+
+            </div>
+         </div>
+          <div class="rightcolumn1">
+            <div class="banimg">
+               <h2>About</h2>
+               <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.  </p>
+                </div>  
+                <div class="banimg1">
+                   <h1>Archives</h1>
+                   <a href="#" class="link-primary" style="text-decoration: none;">March 2013</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">February 2014</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">December 2013</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">November 2013</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">October 2013</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">September 2013</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">June 2013</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">May 2013</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">April 2013</a>
+                    <br>
+                    </div>
+                    <div class="banimg1">
+                    <h1>Elsewhere</h1>
+                     <a href="#" class="link-primary" style="text-decoration: none;">Github</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">Twitter</a>
+                    <br>
+                   <a href="#" class="link-primary" style="text-decoration: none;">Facebook</a>
+                    <br>
+                    </div>
+
+         
+                   
+
+                </div>
+
+
+         </div>
+      </div>
+      </div>
+      <div class="form">
+         <a href="Form.html">Update blog</a>
+      </div>
+
+      <footer class="text-center text-lg-start bg-light text-muted">
+         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    Blog built for  <a href="#" class="link-primary" style="text-decoration: none;">Bootstrap</a> by
+    <a href="#" class="link-primary" style="text-decoration: none;">Bootstrap</a><br>
+    <a href="#top" style="text-decoration: none;">Back to top</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+      
+        
+  
+
+  
+
 
  </body>
+ <script src="main.js"></script>
 </html>
